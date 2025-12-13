@@ -56,8 +56,8 @@ namespace Infrastructure.Data
         public async Task<IReadOnlyList<string>> GetTypesAsync()
         {
             return await context.Products.Select(x => x.Type)
-                             .Distinct()
-                             .ToListAsync();
+                                         .Distinct()
+                                         .ToListAsync();
         }
 
         public bool ProductExists(int id)
