@@ -1,7 +1,9 @@
-<h1>Welcome to {{title}}</h1>
-<button mat-raised-button color="primary">
-  Test
-</button>
-<h2 class="text-3xl font-bold  bg-blue-500">
-  Hello world!
-</h2>
+<app-header></app-header>
+<div class="container">
+  <h2 class="text-3xl font-bold underline">Welcome to {{title}}</h2>
+  <ul>
+    @for(product of products;track product.id){
+      <li class="mb-2">{{product.name}}</li>
+    }
+  </ul>
+</div>
