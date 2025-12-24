@@ -1,9 +1,6 @@
 @use '@angular/material' as mat;
-@use "tailwindcss";
 
-.container{
-    @apply mx-auto max-w-screen-2xl px-8 py-4;
-}
+
 :root {
 @include mat.button-overrides((
   filled-container-shape: 6px,
@@ -35,4 +32,8 @@ body {
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
   margin: 0;
+}
+
+.match-input-height{
+  height: var(--mat-form-field-container-height) !important;
 }
