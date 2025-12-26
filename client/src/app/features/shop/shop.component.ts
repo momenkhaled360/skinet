@@ -25,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     MatMenuTrigger,
     MatPaginator,
     FormsModule,
-    MatIconButton
+    // MatIconButton
 ],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',
@@ -40,7 +40,7 @@ export class ShopComponent implements OnInit {
     {name:'Price: High-Low',value:'priceDesc'},
   ]
   shopParams = new ShopParams();
-  pageSizeOptions=[5,10,15,20];
+  pageSizeOptions= [5 ,10 ,15 ,20];
 
   ngOnInit(): void {
     this.initializeShop();

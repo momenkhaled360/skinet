@@ -9,18 +9,19 @@
 @include mat.badge-overrides((
   background-color:#2563eb,
 ));
+  --mat-form-field-container-height: 56px;
 }
 
 html {
   @include mat.theme((
     color: (
-      primary: mat.$azure-palette,
-      tertiary: mat.$blue-palette,
+
     ),
     typography: Roboto,
     density: 0,
   ));
 }
+
 
 html, body {
   height: 100%;
@@ -34,6 +35,12 @@ body {
   margin: 0;
 }
 
-.match-input-height{
+button.match-input-height{
   height: var(--mat-form-field-container-height) !important;
 }
+
+.mdc-notched-ouline_notch{
+  border-right-style: none !important ;
+}
+
+
