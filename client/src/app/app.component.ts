@@ -9,7 +9,7 @@ import { ShopService } from './core/services/shop.service';
 import { ShopComponent } from "./features/shop/shop.component";
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatButtonModule, HeaderComponent, ShopComponent],
+  imports: [RouterOutlet, MatButtonModule, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
