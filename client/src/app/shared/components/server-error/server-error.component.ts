@@ -12,7 +12,12 @@ import { Router } from '@angular/router';
 export class ServerErrorComponent {
   error?:any;
 
-  constructor(private router:Router){
+constructor(private router: Router) {
+  if (history.state && history.state.error) {
     this.error = history.state.error;
+  } else
+  {
+    this.router.navigateByUrl('/');
+  }
   }
 }

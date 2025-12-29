@@ -25,7 +25,7 @@ export class TestErrorComponent {
   get400Error(){
     this.http.get(this.baseUrl + 'buggy/badrequest').subscribe({
       next : response=>console.log(response),
-      error: error=>console.log(error)
+      error: error=>console.log(error.error)
     })
   }
 
@@ -39,14 +39,18 @@ export class TestErrorComponent {
   get500Error(){
     this.http.get(this.baseUrl + 'buggy/internalerror').subscribe({
       next : response=>console.log(response),
-      error: error=>console.log(error)
+      error: error=>console.log(error.error)
     })
   }
 
   get400ValidationError(){
     this.http.post(this.baseUrl + 'buggy/validationerror',{}).subscribe({
       next : response=>console.log(response),
-      error: error=>this.validationErrors=error
+      error: error=>{
+        console.log(error)
+        this.validationErrors=error
+        
+      }
     })
   }
 
