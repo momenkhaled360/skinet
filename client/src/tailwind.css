@@ -1,7 +1,7 @@
 @import "tailwindcss" important;
 
 .container{
-    @apply mx-auto max-w-screen-2xl px-8 py-4;
+    @apply mx-auto max-w-screen-2xl px-8 py-0;
 }
 
 .text-primary{

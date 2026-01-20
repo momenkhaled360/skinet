@@ -2,12 +2,12 @@ export type User = {
     firstName:string,
     lastName:string,
     email:string,
-    address:string
+    address:Address
 }
 
 export type Address = {
-    Line1:string;
-    Line2?:string;
+    line1:string;
+    line2?:string;
     city:string;
     state:string;
     postalCode:string;
